@@ -1,0 +1,31 @@
+# Practiced: 2022-03-30 08:58:36
+metadata:
+  title: INTERVIEW TITLE!
+  example start: 1
+  example end: 2
+---
+question: Do you enjoy meat?
+yesno: enjoys_meat
+---
+question: Do you enjoy vegetables?
+yesno: enjoys_veggies
+---
+question: What day is it today?
+fields:
+  - Date: user_selected_date
+    datatype: date
+---
+mandatory: True
+question: |
+  % if enjoys_meat:
+  I like meat too
+  % else:
+  Why don't you like meat? lol
+  % endif
+subquestion: |
+  % if user_selected_date != today():
+  Why couldn't you manage to select the correct date? <br />
+  Today's date is ${ today() }
+  % else:
+  Good job, you managed to select the correct date.
+  % endif
