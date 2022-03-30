@@ -1,12 +1,27 @@
 ---
 question: Hello, ${ planet }!
+subquestion: |
+  I surmise that you have more othan ${ inhabitant_count }
+  inhabitants.
 buttons:
-  - Later Nerd: exit
+  - Later Dorks: exit
 mandatory: True
 ---
 question: |
   What is your planet's name?
 fields:
   - Your Planet: planet
+---
+code: |
+  if favoriteNumber > 1000000:
+    inhabitant_count = float('inf')
+  else:
+    inhabitant_count = float('-inf')
+---
+question: |
+  What is your favorite number?
+fields:
+  - Number: favoriteNumber
+    datatype: number
 ---
 
