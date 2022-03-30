@@ -17,7 +17,6 @@ fields:
     datatype: date
 ---
 code: |
-  type_of_person = None
   if enjoys_meat and enjoys_veggies:
     type_of_person = "Weirdo"
   elif enjoys_meat:
@@ -29,7 +28,8 @@ code: |
 ---
 mandatory: True
 question: |
-  You are a  ${type_of_person}
+  You are a ${ type_of_person }. <br/>
+  You enjoy vegetables: ${ enjoys_veggies }
 subquestion: |
   % if user_selected_date != today():
   Why couldn't you manage to select the correct date? <br />
