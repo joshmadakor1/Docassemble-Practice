@@ -1,0 +1,7 @@
+---
+question: Hello, world!
+buttons:
+  - Later Nerd: exit
+mandatory: True
+---
+

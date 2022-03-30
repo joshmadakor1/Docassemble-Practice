@@ -1,4 +1,5 @@
 # Practiced: 2022-03-30 08:58:36
+# Practiced: 2022-03-30 08:58:36
 metadata:
   title: INTERVIEW TITLE!
   example start: 1
@@ -15,13 +16,20 @@ fields:
   - Date: user_selected_date
     datatype: date
 ---
+code: |
+  type_of_person = None
+  if enjoys_meat and enjoys_veggies:
+    type_of_person = "Weirdo"
+  elif enjoys_meat:
+    type_of_person = "True chief."
+  elif enjoys_veggies:
+    type_of_person = "Tofu lion."
+  else:
+    type_of_person = "Skeleton"
+---
 mandatory: True
 question: |
-  % if enjoys_meat:
-  I like meat too
-  % else:
-  Why don't you like meat? lol
-  % endif
+  You are a  ${type_of_person}
 subquestion: |
   % if user_selected_date != today():
   Why couldn't you manage to select the correct date? <br />
