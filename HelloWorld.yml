@@ -3,6 +3,19 @@ question: Hello, ${ planet }!
 subquestion: |
   I surmise that you have more othan ${ inhabitant_count }
   inhabitants.
+attachment:
+  name: A letter for the inhabitants of ${ planet }
+  filename: hello
+  metadata:
+    SingleSpacing: True
+  content: |
+    Dear ${ planet } residents,
+
+    Hello to all ${ inhabitant_count } of you.
+
+    Goodbye,
+
+    Your friend
 buttons:
   - Later Dorks: exit
 mandatory: True
