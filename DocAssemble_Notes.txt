@@ -1,0 +1,46 @@
+Working env.list:
+
+AZUREENABLE=true
+AZUREACCOUNTNAME=joshdocassemble
+AZUREACCOUNTKEY=fTnRnV6+X5AkrRl3StQSuijhMTL7INfc4jPan9+WTcztFDiRTdGo/Us2OEfQnL1NnqUwg1eI3h7lRJGxZ95MJw==
+AZURECONTAINER=docassemble
+DBHOST=joshdocassemble.postgres.database.azure.com
+DBNAME=postgres
+DBUSER=josh
+DBPASSWORD=Gaggle123!!!!!
+DBPREFIX=postgresql+psycopg2://
+DBPORT=5432
+
+
+sudo docker run --env-file=env.list -d -p 80:80 -p 443:443 --stop-timeout 600 jhpyle/docassemble
+sudo docker ps -a
+sudo docker stop -t 600 c890a0e2161d
+
+connect to container:
+sudo docker exec -t -i 40e8636ab166 /bin/bash
+
+Get all service status:
+supervisorctl status
+
+PostgreSQL Server Logs: /var/log/supervisor/postgres-stderr---supervisor-*.log
+
+DBBACKUP=true
+DBSSLMODE=allow
+CONTAINERROLE=web:celery:cron:redis:rabbitmq:log:mail
+
+
+az webapp create --resource-group docassemble --plan ASP-docassemble-8de4 --name docassemble4 --deployment-container-image-name jhpyle/docassemble:latest
+
+Done:
+[X] Setup AppService with DocAssemble container
+[X] Setup external PostgreSql in azure
+[X] Setup external blob/file/backup in azure
+[X] Setup AAD Authentication
+
+TODO:
+BLOB Backup
+AAD Authentication
+Key Vault
+
+ID: 7fb28303-3b8f-4d32-8ae0-6b4e9ed55e9b
+Value: OZy7Q~-eYUE3fIqtn36vn0aQnVOyn8ZXg.p7c

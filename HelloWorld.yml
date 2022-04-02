@@ -24,6 +24,7 @@ question: |
   What is your planet's name?
 fields:
   - Your Planet: planet
+decoration: earth
 ---
 code: |
   if favoriteNumber > 1000000:
@@ -36,5 +37,12 @@ question: |
 fields:
   - Number: favoriteNumber
     datatype: number
+---
+image sets:
+  freepik:
+    images:
+      earth: earth.jpg
+    attribution: |
+      Icon made by [Freepik](http://www.flaticon.com/authors/freepik)
 ---
 
