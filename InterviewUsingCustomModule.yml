@@ -1,0 +1,61 @@
+---
+modules:
+  - .joshtime
+---
+question: |
+  { "planet": "${ planet }", "inhabitant_count": ${ inhabitant_count }, "favoriteNumber": ${ favoriteNumber }, "time": ${ get_time() }
+    }
+subquestion: |
+  { 
+  "planet": "${ planet }", "inhabitant_count": ${ inhabitant_count }, "favoriteNumber": ${ favoriteNumber }, "time": ${ get_time() }
+  }
+
+  ${ response }
+
+attachment:
+  name: A letter for the inhabitants of ${ planet }
+  filename: hello
+  metadata:
+    SingleSpacing: True
+  content: |
+    Dear ${ planet } residents,
+
+    Hello to all ${ inhabitant_count } of you.
+
+    Goodbye,
+
+    Your friend
+buttons:
+  - Later Dorks: exit
+mandatory: True
+---
+question: |
+  What is your planet's name?
+fields:
+  - Your Planet: planet
+decoration: earth
+---
+code: |
+  if favoriteNumber > 1000000:
+    inhabitant_count = float('inf')
+  else:
+    inhabitant_count = float('-inf')
+  if inhabitant_count == float('-inf'):
+    inhabitant_count = 999999999
+  elif inhabitant_count == float('-inf'):
+    inhabitant_count = -999999999
+---
+question: |
+  What is your favorite number?
+fields:
+  - Number: favoriteNumber
+    datatype: number
+---
+image sets:
+  freepik:
+    images:
+      earth: earth.jpeg
+    attribution: |
+      Icon made by [Freepik](http://www.flaticon.com/authors/freepik)
+---
+

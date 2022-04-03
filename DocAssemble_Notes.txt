@@ -38,8 +38,6 @@ Done:
 [X] Setup AAD Authentication
 
 TODO:
-BLOB Backup
-AAD Authentication
 Key Vault
 
 ID: 7fb28303-3b8f-4d32-8ae0-6b4e9ed55e9b
