@@ -1,0 +1,117 @@
+debug: True
+itWorked: True
+enable playground: True
+allow demo: True
+exitpage: https://docassemble.org
+db:
+  prefix: postgresql+psycopg2://
+  name: postgres
+  user: josh@joshdocassemble.postgres.database.azure.com
+  password: Gaggle123!!!!!
+  host: joshdocassemble.postgres.database.azure.com
+  port: 5432
+  ssl mode: null
+  ssl cert: null
+  ssl key: null
+  ssl root cert: null
+  table prefix: null
+  backup: true
+oauth:
+  facebook:
+    enable: False
+    id: 423759825983740
+    secret: 34993a09909c0909b9000a090d09f099
+  google:
+    enable: False
+    id: 23123018240-32239fj28fj4fuhf394h3984eurhfurh.apps.googleusercontent.com
+    secret: DGE34gdgerg3GDG545tgdfRf
+  auth0:
+    enable: False
+    id: ceyd6imTYxTNmuj2CYpwH_cEhdWt93e6
+    secret: LLGEBDrrgDFDfBsFjErsdSdsntkrtAbfa4ee3ss_adfdSDFEWEsfgHTerjNsd3dD
+    domain: example.auth0.com
+  keycloak:
+    enable: False
+    id: ceyd6imTYxTNmuj2CYpwH_cEhdWt93e6
+    secret: LLGEBDrrgDFDfBsFjErsdSdsntkrtAbfa4ee3ss_adfdSDFEWEsfgHTerjNsd3dD
+    domain: keycloak.example.com
+    realm: default
+  twitter:
+    enable: False
+    id: Iweh63ReKfOCttaUBE3t27TET
+    secret: hfieegGgrht5re3hfhsRGStYUbDDAgerergrggSDGHtrErE7rf
+  azure:
+    enable: True
+    id: "b53067d5-f730-4781-9612-88ef1312f94e"
+    secret: "OZy7Q~-eYUE3fIqtn36vn0aQnVOyn8ZXg.p7c"
+  github:
+    enable: False
+    id: ba45316c5951436328bc
+    secret: 68e37cebd352f1ea36b6147cd52ff661c413f4b1
+secretkey: SbMtMGgOYInBtlGbSEcitaOncxMrgiiT
+backup days: 14
+default title: docassemble
+default short title: doc
+mail:
+  username: null
+  password: null
+  server: localhost
+  default sender: '"Administrator" <no-reply@example.com>'
+server administrator email: webmaster@localhost
+default interview: docassemble.base:data/questions/default-interview.yml
+language: en
+locale: en_US.utf8
+os locale: en_US.UTF-8 UTF-8
+timezone: America/New_York
+redis: null
+rabbitmq: null
+celery processes: null
+voicerss:
+  enable: False
+  key: ae8734983948ebc98239e9898f998432
+  languages:
+    en: us
+    es: mx
+    fr: fr
+s3:
+  enable: false
+  access key id: null
+  secret access key: null
+  bucket: null
+  region: null
+  endpoint url: null
+azure:
+  enable: true
+  account name: "@Microsoft.KeyVault(VaultName=docassemble4;SecretName=StorageAccountName)"
+  account key: "@Microsoft.KeyVault(VaultName=docassemble4;SecretName=StorageAccountKey)"
+  container: "@Microsoft.KeyVault(VaultName=docassemble4;SecretName=ContainerName)"
+collect statistics: false
+kubernetes: false
+ec2: false
+log server: null
+use cloud urls: false
+use minio: false
+use https: false
+use lets encrypt: false
+lets encrypt email: null
+behind https load balancer: false
+xsendfile: true
+update on start: true
+allow updates: true
+url root: http://fd027b83d441
+external hostname: none
+expose websockets: false
+websockets ip: null
+websockets port: null
+root: /
+words:
+  - docassemble.base:data/sources/us-words.yml
+allow non-idempotent questions: False
+restrict input variables: True
+web server: nginx
+new markdown to docx: True
+stable version: false
+sql ping: false
+default icons: font awesome
+config from: null
+enable unoconv: true
