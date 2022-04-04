@@ -5,11 +5,11 @@ allow demo: True
 exitpage: https://docassemble.org
 db:
   prefix: postgresql+psycopg2://
-  name: postgres
-  user: josh@joshdocassemble.postgres.database.azure.com
-  password: Gaggle123!!!!!
-  host: joshdocassemble.postgres.database.azure.com
-  port: 5432
+  name: "@Microsoft.KeyVault(VaultName=docassemble4;SecretName=PostgreSQL-Name)"
+  user: "@Microsoft.KeyVault(VaultName=docassemble4;SecretName=PostgreSQL-User)"
+  password: "@Microsoft.KeyVault(VaultName=docassemble4;SecretName=PostgreSQL-Password)"
+  host: "@Microsoft.KeyVault(VaultName=docassemble4;SecretName=PostgreSQL-Host)"
+  port: "@Microsoft.KeyVault(VaultName=docassemble4;SecretName=PostgreSQL-Port)"
   ssl mode: null
   ssl cert: null
   ssl key: null

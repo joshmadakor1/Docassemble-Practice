@@ -17,7 +17,7 @@ sudo docker ps -a
 sudo docker stop -t 600 c890a0e2161d
 
 connect to container:
-sudo docker exec -t -i 40e8636ab166 /bin/bash
+sudo docker exec -t -i 4a8e2e0ca118 /bin/bash
 
 Get all service status:
 supervisorctl status
