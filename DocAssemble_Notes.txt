@@ -39,7 +39,7 @@ Done:
 [/] Setup KeyVault for config credentials
 
 TODO:
-[ ] Continue setting up KeyVault for AAD App Registration name/secret
+[ ] Continue setting up KeyVault for AAD App Registration name/secret.
 
 ID: 7fb28303-3b8f-4d32-8ae0-6b4e9ed55e9b
 Value: OZy7Q~-eYUE3fIqtn36vn0aQnVOyn8ZXg.p7c
