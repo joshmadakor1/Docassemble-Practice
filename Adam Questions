@@ -1,0 +1,28 @@
+Do we have any idea of what the expected load for Autodoc once in PROD in terms of concurrent users or other metrics?
+--
+
+Seems too easy; Why don't we want to just use a "big" App Service plan with a single instance deployment? (offload BLOB, Redis, and Postgres to auto-scaling PaaS).
+(Is it because too many background processes may run [celery]?)
+
+Assuming we offload Blob/Redis/PostgreSQL, does the docassemble container become stateless? (as in, will different contaienrs pointing to the same Blob/Redis/PosgreSQL instances be able to handle the same user during the same session?)
+
+Am I thinking correctly here? 
+Show FE/BE diagram?
+
+
+Can I be granted the ability do add role assignments to stuff in my RG? (key vault)
+Can I use your Azure AD App Registration for my dev enrvironment or should I make my own?
+
+Ballpark max concurrent: 2-3 per offer 135 total offers (~405)
+Look into AAD authentication (KeyError: 'id')
+
+https://aka.ms/asbtasks -> AutoDoc
+
+Work on push to ADE
+
+
+
+
+
+
+
